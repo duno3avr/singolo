@@ -1,1 +1,1 @@
-https://viktorsipach.github.io/singolo/
+https://duno3avr.github.io/singolo/
