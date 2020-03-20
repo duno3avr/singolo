@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-	<div class="header">
+	<div class="header" id="header">
 		<div class="wrapper">
 			<div class="navigation">
 				<h1 class="logo">
@@ -16,11 +16,11 @@
 				</h1>
         <nav>
           <ul class="nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#header" class="nav_link active">Home</a></li>
+            <li><a href="#services" class="nav_link">Services</a></li>
+            <li><a href="#portfolio" class="nav_link">Portfolio</a></li>
+            <li><a href="#about-us" class="nav_link">About</a></li>
+            <li><a href="#contacts" class="nav_link">Contact</a></li>
           </ul>
       </nav>
 			</div>
@@ -31,10 +31,15 @@
       <div class="slider-items"> 
         <div class="vertical-phone">
           <img src="assets/vertical.png" alt="Phone #1">
+          <div class="bg-vertical-phone"></div>
         </div>
         <div class="horizontal-phone">
           <img src="assets/horizontal.png" alt="Phone #2">
+          <div class="bg-horizontal-phone"></div>
         </div>
+      </div>
+      <div class="slider-items slide-two"> 
+        <img src="assets/slide_2.png" alt="slide_2">
       </div>
       <div class="arrow-right">
         <img src="assets/next.png" alt="next">
@@ -44,7 +49,7 @@
       </div>
     </div>
   </div>
-  <section class="services">
+  <section class="services" id="services">
     <div class="wrapper">
       <h2>Our Services</h2>
       <p class="our-services-text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi
@@ -85,35 +90,35 @@
       </div>  
     </div>
   </section>
-  <section class="portfolio">
+  <section class="portfolio" id="portfolio">
     <div class="wrapper">
       <div class="portfolio-wrapper">
         <h2>Portfolio</h2>
         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
         <div class="tags">
-          <div class="tag"><a href="#">All</a></div>
-          <div class="tag"><a href="#">Web Design</a></div>
-          <div class="tag"><a href="#">Graphic Design</a></div>
-          <div class="tag"><a href="#">Artwork</a></div>
+          <div class="tag" id="tag-all"><a href="#portfolio" class="tag-link active-btn">All</a></div>
+          <div class="tag" id="tag-web"><a href="#portfolio " class="tag-link">Web Design</a></div>
+          <div class="tag" id="tag-design"><a href="#portfolio" class="tag-link">Graphic Design</a></div>
+          <div class="tag" id="tag-artwork"><a href="#portfolio" class="tag-link">Artwork</a></div>
         </div>
         <div class="layout-4-columns">
-          <img src="./assets/img/portfolio/image1.png" alt="image">
-          <img src="./assets/img/portfolio/image2.png" alt="image">
-          <img src="./assets/img/portfolio/image3.png" alt="image">
-          <img src="./assets/img/portfolio/image4.png" alt="image">
-          <img src="./assets/img/portfolio/image5.png" alt="image">
-          <img src="./assets/img/portfolio/image6.png" alt="image">
-          <img src="./assets/img/portfolio/image7.png" alt="image">
-          <img src="./assets/img/portfolio/image8.png" alt="image">
-          <img src="./assets/img/portfolio/image9.png" alt="image">
-          <img src="./assets/img/portfolio/image10.png" alt="image">
-          <img src="./assets/img/portfolio/image11.png" alt="image">
-          <img src="./assets/img/portfolio/image12.png" alt="image">
+          <img src="./assets/img/portfolio/image1.png" alt="image" class="image">
+          <img src="./assets/img/portfolio/image2.png" alt="image" class="image">
+          <img src="./assets/img/portfolio/image3.png" alt="image" class="image">
+          <img src="./assets/img/portfolio/image4.png" alt="image" class="image">
+          <img src="./assets/img/portfolio/image5.png" alt="image" class="image">
+          <img src="./assets/img/portfolio/image6.png" alt="image" class="image">
+          <img src="./assets/img/portfolio/image7.png" alt="image" class="image">
+          <img src="./assets/img/portfolio/image8.png" alt="image" class="image">
+          <img src="./assets/img/portfolio/image9.png" alt="image" class="image">
+          <img src="./assets/img/portfolio/image10.png" alt="image" class="image">
+          <img src="./assets/img/portfolio/image11.png" alt="image" class="image">
+          <img src="./assets/img/portfolio/image12.png" alt="image" class="image"> 
         </div>
         </div>
     </div>
   </section>
-  <section class="about-us">
+  <section class="about-us" id="about-us">
     <div class="wrapper">
       <div class="wrapper-about-us">
         <h2>About Us</h2>
@@ -162,7 +167,7 @@
       </div>
     </div>
   </section>
-  <section class="contacts">
+  <section class="contacts" id="contacts">
     <div class="wrapper">
         <div class="wrapper-contacts">
             <h2>Get a Quote</h2>
@@ -170,10 +175,13 @@
             <div class="form">
                 <form class="contacts-form" method="POST">
                     <input class="field" type="text" name="name" placeholder="Name (Required)" required>
+                    <span class="quote-name none">Please enter your name</span>
                     <input class="field"  type="email" name="email" placeholder="Email (Required)" required>
+                    <span class="quote-mail none">Please enter your mail</span>
+                    <span class="quote-mail-second none">Please enter valid email</span>
                     <input class="field" type="text" name="subject" placeholder="Subject">
                     <textarea class="textarea_field field" name="message" placeholder="Describe your project in detail..." cols="30" rows="13"></textarea>
-                    <button  class="btn" type="submit" formmethod="POST">Submit</button>
+                    <button  class="btn" type="submit">Submit</button>
                 </form>
                 <div class="form-info">
                     <h4 class="form-info-title">Contact Information</h4>
@@ -197,6 +205,22 @@
             </div>
         </div>
     </div>
+    <div class="modal-window none">
+      <div class="modal-window__content">
+          <h4 class="modal-window__title">
+              Письмо отправлено
+          </h4>
+          <p class="modal-window__subject">
+              Без темы
+          </p>
+          <p class="modal-window__describe">
+              Без описания
+          </p>
+          <button class="modal-window__submit-btn">
+              Ok
+          </button>
+      </div>
+  </div>
 </section>
 <footer class="footer">
     <div class="wrapper">
@@ -211,5 +235,6 @@
         </div>
     </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
