@@ -85,7 +85,8 @@ let portfolioMenu = document.querySelector('.tags');
 let portfolioLinks = document.querySelectorAll('.tag-link');
 
 portfolioMenu.addEventListener('click', function () {
-    portfolioLinks.forEach(function (item) {
+    event.preventDefault();
+	portfolioLinks.forEach(function (item) {
         item.classList.remove('active-btn');
         event.target.classList.add('active-btn');
     });
