@@ -103,12 +103,10 @@ let portfolioBtnArtwork = document.getElementById('tag-artwork');
 
 function shufflePictures(event) {
     if (!event.target.classList.contains('active-btn')) {
-        for (let i = images.length; i > 0; i--) {
-            let randomIndex = Math.floor(Math.random() * (i + 1));
-            list_images.insertBefore(images[randomIndex], images[i]);
+        for (let i = list_images.children.length; i >= 0; i--) {
+            list_images.appendChild(list_images.children[Math.random() * i | 0]);
         }
     }
-    
 }
 
 portfolioBtnAll.addEventListener('click', shufflePictures);
